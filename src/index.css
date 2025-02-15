@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@layer utilities {
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+}
+
+* {
+  font-weight: 500;
+  font-family: 'Lato', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.animated-content {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+}
+
+.swiper-slide-active .animated-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+}
+
+
+@media(max-width: 1500px) {
+  html {
+    font-style: 60%;
+  }
+}
+
+@media(max-width: 1024px) {
+  html {
+    font-style: 50%;
+  }
+}
