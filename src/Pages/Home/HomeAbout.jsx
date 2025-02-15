@@ -3,26 +3,11 @@ import React, { useEffect, useRef, useState } from "react";
 import home_about_img from "/Media/Home/1.jpg";
 
 const HomeAbout = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => setIsVisible(entry.isIntersecting),
-      { threshold: 0.2 }
-    );
-
-    if (sectionRef.current) observer.observe(sectionRef.current);
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <div
-      ref={sectionRef}
       className={`py-[6rem] px-[20rem] w-full relative object-cover max-xl:px-[5rem] max-md:px-[2rem] 
-      transition-all duration-[1s] ease-in-out transform ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-[50px]"
-      }`}
+      transition-all duration-[1s] ease-in-out`}
     >
       <div className="relative grid grid-cols-2 w-full gap-[6rem] justify-center max-lg:grid-cols-1 max-lg:gap-[4rem]">
         <div className="flex flex-col gap-[1rem] justify-center w-full">
