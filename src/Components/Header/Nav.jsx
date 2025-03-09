@@ -167,7 +167,9 @@ const Nav = () => {
             onClick={toggleMenu}
           />
         </div>
-        <ul className={`flex flex-col justify-center items-center text-center h-full px-[6rem] py-[2rem] gap-[3rem] text-[black]`}>
+        <ul
+          className={`flex flex-col justify-center items-center text-center h-full px-[6rem] py-[0rem] gap-[3rem] text-[black]`}
+        >
           {navlink.map((e) => {
             if (e.submenu) {
               return (
@@ -184,10 +186,10 @@ const Nav = () => {
                     <i className="fa-solid fa-chevron-down text-[1.4rem] relative bottom-[0.2rem]"></i>
                   </span>
                   <div
-                    className={`w-full overflow-hidden flex flex-col gap-[1rem] justify-center items-center text-center transition-all duration-300 ease-in-out 
+                    className={`w-full overflow-y-auto flex flex-col gap-[0.5rem] justify-center items-center text-center transition-all duration-300 ease-in-out z-[100] 
                     ${
                       isMobileDropdownOpen === e.id
-                        ? "max-h-[250px] mt-[2rem] mb-[-1rem] translate-y-0 opacity-[1]"
+                        ? "max-h-[300px] mt-[1rem] mb-[-2rem] translate-y-0 opacity-[1]"
                         : "max-h-0 -translate-y-full opacity-0"
                     }`}
                   >
@@ -195,7 +197,7 @@ const Nav = () => {
                       <Link
                         key={sub.id}
                         to={sub.to}
-                        className="block text-[2rem] text-black py-[0.5rem] transition"
+                        className="block text-[1.6rem] text-black py-[0.5rem] transition"
                         onClick={handleNavigation}
                       >
                         <i className="fa-solid fa-circle text-[1rem] text-[grey]"></i>
