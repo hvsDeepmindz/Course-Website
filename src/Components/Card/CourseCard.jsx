@@ -2,15 +2,20 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useRef, useState } from "react";
 import ViewBtn from "../Btn/ViewBtn";
+import { Link } from "react-router-dom";
 
 const CourseCard = ({ coursecardData, isVisible }) => {
+  const handleNavigation = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <>
       {coursecardData.map((e, index) => {
         return (
           <div
             className={`flex flex-col gap-[1rem] w-full relative h-full shadow-md bg-[#f2f2f2] transition-all 
-            duration-[1s] ease-in-out transform ${
+            duration-[0.5s] ease-in-out transform ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-[100px]"
@@ -30,9 +35,13 @@ const CourseCard = ({ coursecardData, isVisible }) => {
                 {e.title}
               </h2>
               <p className="text-[2rem] font-normal text-[#414141]">{e.desc}</p>
-              <div className="flex items-center justify-center w-full mt-[1rem]">
+              <Link
+                to={e.linkToPage}
+                onClick={handleNavigation}
+                className="flex items-center justify-center w-full mt-[1rem]"
+              >
                 <ViewBtn btnTitle={"Learn More"} />
-              </div>
+              </Link>
             </div>
           </div>
         );
