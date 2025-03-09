@@ -12,7 +12,7 @@ const NavLink = [
   {
     id: 2,
     title: "About Us",
-    to: "/",
+    to: "/aboutus",
     class:
       "text-[2rem] text-[black] max-md:text-[2rem] font-normal hover:scale-[1.1] transition-all duration-[0.2s] navlink tracking-[0] hover:text-[darkblue] max-[768px]:border-[0] border-[grey]",
     icon: ``,
@@ -20,7 +20,7 @@ const NavLink = [
   {
     id: 3,
     title: "Courses",
-    to: "/",
+    to: "/courses",
     class:
       "text-[2rem] text-[black] max-md:text-[2rem] font-normal hover:scale-[1.1] transition-all duration-[0.2s] navlink tracking-[0] hover:text-[darkblue] max-[768px]:border-[0] border-[grey]",
     icon: ``,
