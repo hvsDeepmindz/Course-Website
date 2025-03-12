@@ -1,4 +1,4 @@
-export const CommunicationCourseImageData = [
+const CommunicationCourseImageData = [
   {
     id: 1,
     img: `/Media/Courses/Communication/1.jpg`,
@@ -16,3 +16,5 @@ export const CommunicationCourseImageData = [
     img: `/Media/Courses/Communication/4.jpg`,
   },
 ];
+
+export default CommunicationCourseImageData;

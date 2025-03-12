@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import TopBanner from "../../../Components/Card/TopBanner";
 import { TableauCourseTopBannerData } from "../../../Services/Data/TopBannerData";
+import TableauBICourseMain from "./TableauCourseMain";
 
 const TableauCourse = () => {
   const [tableauCourseTopBannerData] = useState(TableauCourseTopBannerData);
@@ -9,6 +10,7 @@ const TableauCourse = () => {
   return (
     <>
       <TopBanner topBannerData={tableauCourseTopBannerData} />
+      <TableauBICourseMain />
     </>
   );
 };

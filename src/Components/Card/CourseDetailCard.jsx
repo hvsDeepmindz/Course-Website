@@ -2,10 +2,8 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useRef, useState } from "react";
 import ImageCard from "./ImageCard";
-import { CommunicationCourseImageData } from "../../Services/Data/ImageData";
 
-const CourseDetailCard = ({ courseDetailCardData = [] }) => {
-  const [communicationCourseImageData] = useState(CommunicationCourseImageData);
+const CourseDetailCard = ({ courseDetailCardData = [], imgCardData }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [openIndex, setOpenIndex] = useState(null);
   const sectionRef = useRef(null);
@@ -58,10 +56,7 @@ const CourseDetailCard = ({ courseDetailCardData = [] }) => {
               className={`mt-[2rem] w-full grid grid-cols-4 gap-[2rem] justify-center transition-all duration-[0.4s] ease-in-out 
               max-lg:grid-cols-2 max-sm:grid-cols-1`}
             >
-              <ImageCard
-                imgData={communicationCourseImageData}
-                isVisible={isVisible}
-              />
+              <ImageCard imgData={imgCardData} isVisible={isVisible} />
             </div>
             <h2 className="text-[2.5rem] text-[#212121] font-normal mt-[2rem]">
               Learning Objectives
